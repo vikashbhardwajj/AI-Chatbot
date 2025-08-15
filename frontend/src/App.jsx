@@ -1,5 +1,7 @@
 import { useState } from "react";
 import ChatbotUi from "./pages/ChatbotUi";
+import aiImg from "/ai2.png";
+
 
 const App = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -10,6 +12,7 @@ const App = () => {
       <div
         className={`left flex flex-col justify-start pt-20 items-center lg:items-start lg:justify-start h-[100vh] lg:w-1/2 self-stretch ${isOpen ? "hidden" : "block"} `}
       >
+        <img className="absolute lg:hidden h-[400px] w-[300px] translate-x-[-30%] object-cover object-center bottom-3 left-1/2" src={aiImg} alt="" />
         <div className="content pt-[5rem]">
           <h1 className="lg:text-8xl sm:text-8xl md:text-9xl text-[16vw] leading-none md:leading-27 ">Let's Start </h1>
           <h1 className="lg:text-8xl sm:text-8xl md:text-9xl text-[16vw] leading-none md:leading-27 ">Some</h1>

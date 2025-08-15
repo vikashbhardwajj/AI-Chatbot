@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import "../App.css"
 
 const ChatbotUi = ({ setisOpen, isOpen }) => {
   const [socket, setSocket] = useState(null);
@@ -33,8 +34,6 @@ const ChatbotUi = ({ setisOpen, isOpen }) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
 
-      console.log("Message sent:", e.target.value);
-
       handleSendMessage();
     }
   };
@@ -57,7 +56,6 @@ const ChatbotUi = ({ setisOpen, isOpen }) => {
       };
 
       setMessages(prevMessages => [...prevMessages, botMessage]);
-
     });
   }, []);
 

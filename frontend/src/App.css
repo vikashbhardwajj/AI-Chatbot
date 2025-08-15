@@ -1,0 +1,11 @@
+::selection {
+  background-color: #5433d695;
+
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #5433d695;
+
+  color: white;
+}
